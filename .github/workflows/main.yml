@@ -15,9 +15,14 @@ jobs:
       run: |
         echo Add other actions to build,
         echo test, and deploy your project.
-    - run: echo hello > world.txt
+    - run: echo `date` > world.txt
 
     - uses: actions/upload-artifact@master
       with:
         name: my-artifact
         path: world.txt
+
+    - uses: actions/upload-artifact@master
+      with:
+        name: my-artifact
+        path: does-not-exist.txt
