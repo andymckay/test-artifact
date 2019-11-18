@@ -19,5 +19,37 @@ jobs:
 
     - uses: actions/upload-artifact@master
       with:
-        name: my-artifact
+        name: my-artifact-0
+        path: world.txt
+    - uses: actions/upload-artifact@master
+      with:
+        name: my-artifact-2
+        path: world.txt
+    - uses: actions/upload-artifact@master
+      with:
+        name: my-artifact-3
+        path: world.txt
+    - uses: actions/upload-artifact@master
+      with:
+        name: my-artifact-4
+        path: world.txt
+    - uses: actions/upload-artifact@master
+      with:
+        name: my-artifact-5
+        path: world.txt
+    - uses: actions/upload-artifact@master
+      with:
+        name: my-artifact-6
+        path: world.txt
+    - uses: actions/upload-artifact@master
+      with:
+        name: my-artifact-7
+        path: world.txt
+    - uses: actions/upload-artifact@master
+      with:
+        name: my-artifact-8
+        path: world.txt
+    - uses: actions/upload-artifact@master
+      with:
+        name: my-artifact-9
         path: world.txt
