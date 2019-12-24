@@ -29,11 +29,15 @@ jobs:
       with:
         name: my-artifact-3
         path: large-zip.txt
-    
+
+    # This is a small zip file, but a 1MB file inside it.
+    - run: |
+        dd if=/dev/zero of=small-zip.txt count=1024 bs=1024
+        zip small-zip.zip small-zip.txt
     - uses: actions/upload-artifact@master
       with:
         name: my-artifact-4
-        path: world.txt
+        path: small-zip.zip
     
     - uses: actions/upload-artifact@master
       with:
