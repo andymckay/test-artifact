@@ -28,7 +28,7 @@ jobs:
     - uses: actions/upload-artifact@master
       with:
         name: my-artifact-3
-        path: larger-zip.txt
+        path: large-zip.txt
     
     - uses: actions/upload-artifact@master
       with:
