@@ -14,7 +14,7 @@ jobs:
         name: my-artifact-0
         path: world.txt
     
-    - run: dd if=/dev/zero of=larger-world.txt count=1024 bs=1024
+    - run: dd if=/dev/urandom of=larger-world.txt count=1024 bs=1024
       
     - uses: actions/upload-artifact@master
       with:
