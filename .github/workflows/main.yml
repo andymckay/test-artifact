@@ -14,17 +14,21 @@ jobs:
         name: my-artifact-0
         path: world.txt
     
-    - run: dd if=/dev/urandom of=larger-world.txt count=1024 bs=1024
+    # This is a small zip file, but a 1MB file inside it.
+    - run: dd if=/dev/zero of=small-zip.txt count=1024 bs=1024
       
     - uses: actions/upload-artifact@master
       with:
         name: my-artifact-2
-        path: larger-world.txt
-    
+        path: small-zip.txt
+  
+    # This is a 1MB zip file, and 1MB file inside it.
+    - run: dd if=/dev/urandom of=large-zip.txt count=1024 bs=1024
+      
     - uses: actions/upload-artifact@master
       with:
         name: my-artifact-3
-        path: world.txt
+        path: larger-zip.txt
     
     - uses: actions/upload-artifact@master
       with:
