@@ -8,47 +8,49 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v1
-    - name: Run a one-line script
-      run: echo Hello, world!
-    - name: Run a multi-line script
-      run: |
-        echo Add other actions to build,
-        echo test, and deploy your project.
     - run: echo `date` > world.txt
-
     - uses: actions/upload-artifact@master
       with:
         name: my-artifact-0
         path: world.txt
+    
+    - run: dd if=/dev/zero of=larger-world.txt count=1024 bs=1024
+      
     - uses: actions/upload-artifact@master
       with:
         name: my-artifact-2
-        path: world.txt
+        path: larger-world.txt
+    
     - uses: actions/upload-artifact@master
       with:
         name: my-artifact-3
         path: world.txt
+    
     - uses: actions/upload-artifact@master
       with:
         name: my-artifact-4
         path: world.txt
+    
     - uses: actions/upload-artifact@master
       with:
         name: my-artifact-5
         path: world.txt
+    
     - uses: actions/upload-artifact@master
       with:
         name: my-artifact-6
         path: world.txt
+    
     - uses: actions/upload-artifact@master
       with:
         name: my-artifact-7
         path: world.txt
+    
     - uses: actions/upload-artifact@master
       with:
         name: my-artifact-8
         path: world.txt
+    
     - uses: actions/upload-artifact@master
       with:
         name: my-artifact-9
