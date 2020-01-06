@@ -47,7 +47,7 @@ jobs:
     - uses: actions/upload-artifact@master
       with:
         name: my-artifact-folder
-        path: /tmp/
+        path: /tmp/*.txt
     
     - uses: actions/upload-artifact@master
       with:
