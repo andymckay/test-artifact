@@ -38,11 +38,16 @@ jobs:
       with:
         name: my-artifact-4
         path: small-zip.zip
-    
+        
+    - run: |
+        echo `date` > /tmp/1-world.txt
+        echo `date` > /tmp/2-world.txt
+        echo `date` > /tmp/3-world.txt
+        
     - uses: actions/upload-artifact@master
       with:
-        name: my-artifact-5
-        path: world.txt
+        name: my-artifact-folder
+        path: /tmp/
     
     - uses: actions/upload-artifact@master
       with:
