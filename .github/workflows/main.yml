@@ -40,14 +40,15 @@ jobs:
         path: small-zip.zip
         
     - run: |
-        echo `date` > /tmp/1-world.txt
-        echo `date` > /tmp/2-world.txt
-        echo `date` > /tmp/3-world.txt
+        mkdir /tmp/test-dir
+        echo `date` > /tmp/test-dir/1-world.txt
+        echo `date` > /tmp/test-dir/2-world.txt
+        echo `date` > /tmp/test-dir/3-world.txt
         
     - uses: actions/upload-artifact@master
       with:
         name: my-artifact-folder
-        path: /tmp/*.txt
+        path: /tmp/test-dir/
     
     - uses: actions/upload-artifact@master
       with:
