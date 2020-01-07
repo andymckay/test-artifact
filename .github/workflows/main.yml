@@ -50,15 +50,17 @@ jobs:
         name: my-artifact-folder
         path: /tmp/test-dir/
     
+    # This is one artifact
     - uses: actions/upload-artifact@master
       with:
         name: my-artifact-6
         path: world.txt
     
+    # This is a different artifact but the same name
     - uses: actions/upload-artifact@master
       with:
-        name: my-artifact-7
-        path: world.txt
+        name: my-artifact-6
+        path: /tmp/test-dir/2-world.txt
     
     - uses: actions/upload-artifact@master
       with:
