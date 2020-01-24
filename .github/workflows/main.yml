@@ -1,6 +1,6 @@
 name: CI
 
-on: [push]
+on: [repository_dispatch, push]
 
 jobs:
   build:
