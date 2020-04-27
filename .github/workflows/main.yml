@@ -31,7 +31,7 @@ jobs:
         path: large-zip.txt
 
     # This is a 500MB zip file, and 500MB file inside it.
-    - run: dd if=/dev/urandom of=large-zip.txt count=500MB bs=500MB
+    - run: dd if=/dev/urandom of=large-zip.txt count=200MB bs=200MB
       
     - uses: actions/upload-artifact@master
       with:
