@@ -29,14 +29,6 @@ jobs:
       with:
         name: my-artifact-3
         path: large-zip.txt
-
-    # This is a 10MB zip file, and 10MB file inside it.
-    - run: dd if=/dev/urandom of=large-zip.txt count=10MB bs=10MB
-      
-    - uses: actions/upload-artifact@master
-      with:
-        name: my-artifact-3.1
-        path: bigger-zip.txt
         
     # This is a small zip file, but a 1MB file inside it.
     - run: |
