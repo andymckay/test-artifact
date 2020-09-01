@@ -1,6 +1,6 @@
 name: CI # test
 
-on: [repository_dispatch, push]
+on: [repository_dispatch, push, workflow_dispatch]
 
 jobs:
   build:
